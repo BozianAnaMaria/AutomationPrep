@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.managers.DriverManager;
 import org.example.managers.RandomDataManager;
+import org.example.managers.ScrollManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -31,7 +32,7 @@ public class TestRunner {
         passwordInput.sendKeys(passwordData);
 
         WebElement confirmToggle = driver.findElement(By.name("confirmToggle"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", confirmToggle);
+        ScrollManager.scrollToElement(confirmToggle);
 
         WebElement connectButton = driver.findElement(By.id("loginbtn"));
         connectButton.click();
