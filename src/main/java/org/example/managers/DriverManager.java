@@ -43,7 +43,16 @@ public class DriverManager {
     }
 
     public WebDriver getDriver() {
+        if (driver == null) {
+            DriverManager.getInstance();
+        }
         return driver;
     }
 
+    public void quiteTheDriver() {
+        driver.quit();
+        driver = null;
+        instance = null;
+        System.out.println("Driver quit");
+    }
 }

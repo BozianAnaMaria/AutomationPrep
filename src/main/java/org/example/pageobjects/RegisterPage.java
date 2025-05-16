@@ -1,5 +1,6 @@
 package org.example.pageobjects;
 
+import org.example.managers.ScrollManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,7 +37,9 @@ public class RegisterPage extends Page{
     }
 
     public void enableToggle(){
+        ScrollManager.scrollToElement(confirmToggle);
         confirmToggle.click();
+        System.out.println("The Toggle is enabled");
     }
 
     public void clickRegisterButton() {

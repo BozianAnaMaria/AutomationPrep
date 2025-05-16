@@ -17,8 +17,13 @@ public abstract class Page {
 
     protected WebElement loginLink;
 
-    protected WebElement navigateToRegisterPage(){
+    public void navigateToRegisterPage(){
         myAccountIcon.click();
         registerLink.click();
+        System.out.println("The Register Page was selected");
+    }
+
+    public void navigateToLoginPage(){
+        loginLink.click();
     }
 }
