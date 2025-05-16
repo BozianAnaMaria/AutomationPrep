@@ -15,6 +15,7 @@ public class TestRunnerWithPageObjects {
 
         HomePage homePage = new HomePage(driver);
         // homePage has to navigate to register page
+        homePage.navigateToRegisterPage();
 
         RegisterPage registerPage = new RegisterPage(driver);
 
