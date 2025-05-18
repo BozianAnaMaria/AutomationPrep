@@ -2,6 +2,7 @@ package org.example.managers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -14,8 +15,9 @@ public class DriverManager {
     private DriverManager() {
         switch (WEB_DRIVER_TYPE.toUpperCase()){
             case "CHROME":
-                driver = new ChromeDriver();
-                driver.manage().window().maximize();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--incognito");
+                // options.addArguments("--headless");
                 System.out.println("Chrome driver loaded");
                 break;
             case "FIREFOX":

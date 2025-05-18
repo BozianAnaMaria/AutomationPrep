@@ -49,7 +49,7 @@ public class RegisterFlowJUnit {
 
     @Test
     @DisplayName("The user remains on the register page without accepting privacy rules")
-    public void registerFlowWithoutPrivacyRules() {
+    public void registerFlowWithoutPrivacyRules() throws InterruptedException {
         driver = DriverManager.getInstance().getDriver();
         homePage.navigateToRegisterPage();
 
