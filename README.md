@@ -1,8 +1,9 @@
 # Description
-This project is designed to provide hands-on experience with various automation testing concepts, tools, and frameworks. This project serves as a practical learning process for building robust and maintainable automated test suites.
+This project is a hands-on learning project for mastering Selenium WebDriver automation testing with Java. This repository contains practical examples, test scenarios, and frameworks to help you build expertise in web automation testing.
 
 
 # Features
+  - Selenium WebDriver Integration: Complete setup with latest Selenium WebDriver
   -	Web UI Automation: Automated testing of web applications using modern frameworks
   -	API Testing: RESTful API testing with comprehensive validation
   -	Cross-browser Testing: Support for multiple browsers (Chrome, Firefox, Edge)
